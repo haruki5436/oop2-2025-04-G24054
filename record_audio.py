@@ -16,7 +16,7 @@ try:
     # -i <入力デバイス名>: デバイス名を指定
     (
         ffmpeg
-        .input(':0', format='avfoundation', t=duration) # macOSの例
+        .input(':1', format='avfoundation', t=duration) # macOSの例
         .output(output_file, acodec='pcm_s16le', ar='44100', ac=1)
         .run(overwrite_output=True)
     )
