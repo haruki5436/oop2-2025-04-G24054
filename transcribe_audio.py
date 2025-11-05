@@ -12,7 +12,7 @@ def preprocess_audio(sound):
         sound = sound.set_channels(1)
     return sound
 
-def transcribe_audio(filepaths, model_path="./whisper-base-mlx"):
+def transcribe_audio(filepaths, model_path="mlx-community/whisper-base-mlx"):
     """
     音声ファイルのリストを受け取り、順に文字起こしを行う
     """
