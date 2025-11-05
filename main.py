@@ -1,19 +1,15 @@
-from record_audio import record_audio
-from split_audio import split_audio
+import record_audio   # ← ファイル名が同じでもOKな書き方
 from transcribe_audio import transcribe_audio
 from save_text import save_text
 
 def main():
-    # ①録音
-    record_audio()
+    # ① 音声を録音
+    record_audio.record_audio()  # ← モジュール名＋関数名で呼ぶ
 
-    # ②音声分割
-    files = split_audio()
+    # ② 録音した音声を文字起こし
+    text = transcribe_audio("recorded.wav")
 
-    # ③文字起こし
-    text = transcribe_audio(files)
-
-    # ④保存
+    # ③ 文字起こし結果を保存
     save_text(text)
 
 if __name__ == "__main__":
