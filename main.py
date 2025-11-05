@@ -7,7 +7,7 @@ def main():
     record_audio.record_audio()  # ← モジュール名＋関数名で呼ぶ
 
     # ② 録音した音声を文字起こし
-    text = transcribe_audio("recorded.wav")
+    text = transcribe_audio(["python-audio-output.wav"])
 
     # ③ 文字起こし結果を保存
     save_text(text)
